@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'projeto-laravel';
+  title = 'projeto-angular';
 
   name: string = 'Luís Trivinho';
 }

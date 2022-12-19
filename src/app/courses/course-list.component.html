@@ -1,0 +1,27 @@
+<h2>Lista de Cursos</h2>
+<table class="table table-striped table-hover table-bordered">
+  <thead class="table-primary">
+    <tr>
+      <th class="text-center align-middle">Capa</th>
+      <th class="text-center align-middle">Codigo</th>
+      <th class="text-center align-middle">Data de Lançamento</th>
+      <th class="text-center align-middle">Nome</th>
+      <th class="text-center align-middle">Preço (R$)</th>
+      <th class="text-center align-middle">Duração</th>
+      <th class="text-center align-middle">Nota</th>
+      <th class="text-center align-middle">Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <td class="text-center align-middle"><img [src]="course.imageUrl" width="40" height="40"></td>
+      <td class="text-center align-middle">{{course.code}}</td>
+      <td class="text-center align-middle">{{course.releaseDate}}</td>
+      <td class="text-center align-middle">{{course.name}}</td>
+      <td class="text-center align-middle">{{course.price}}</td>
+      <td class="text-center align-middle">{{course.duration}}</td>
+      <td class="text-center align-middle"><app-star [rating]="course.rating"></app-star></td>
+      <td class="text-center align-middle"></td>
+    </tr>
+  </tbody>
+</table>
