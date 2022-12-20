@@ -11,6 +11,30 @@ export class CourseService {
     return COURSES;
   }
 
+  retriveById(id: number): Course{
+    for (var _i = 0; _i < COURSES.length; _i++) {
+      if (COURSES[_i].id == id)
+        return COURSES[_i]
+    }
+    return {
+      id: 0,
+      name: '',
+      imageUrl: '',
+      price: 0,
+      code: '',
+      description: '',
+      duration: 0,
+      rating: 0,
+      releaseDate: ''
+    }
+  }
+
+  save(course: Course) {
+    if (course.id) {
+      const index = COURSES.findIndex((courseIterator: Course) => courseIterator.id === course.id);
+      COURSES[index] = course;
+    }
+  }
 }
 
 var COURSES: Course[] = [

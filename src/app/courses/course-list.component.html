@@ -29,7 +29,9 @@
       <td class="text-center align-middle">
         <app-star [rating]="course.rating"></app-star>
       </td>
-      <td class="text-center align-middle"></td>
+      <td class="text-center align-middle">
+        <a [routerLink]="['/courses/edit', course.id]" class="btn btn-warning">Editar</a>
+      </td>
     </tr>
   </tbody>
 </table>
